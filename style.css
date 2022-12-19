@@ -1,0 +1,121 @@
+* {
+    --gap: 4rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: #181a1b;
+    color: white;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+
+#header {
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#title {
+    font-size: 9rem;
+    font-family: 'Tangerine', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #8b0401;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#btn {
+    font-size: 2rem;
+    text-align: center;
+    font-family: inherit;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    padding: 2rem 0 2rem 0;
+}
+
+#btn-active {
+    font-size: 2rem;
+    text-align: center;
+    font-family: inherit;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 2px solid white;
+    padding: 2rem 0 2rem 0;
+}
+
+#btn:hover, #btn-active:hover {
+	-webkit-transform: translateY(-0.5rem);
+	transform: translateY(-0.5rem);
+    transition-duration: 0.3s;
+}
+
+#middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(0.5 * var(--gap));
+    padding: 6rem 0 6rem 0;
+    background: #262a2b;
+}
+
+#middle span {
+    font-size: 2rem;
+}
+
+#steak-picture {
+    width: 50vw;
+    aspect-ratio: 3/2;
+    border-radius: 1rem;
+}
+
+#footer {
+    margin-bottom: 1rem;
+}
+
+#footer-contents {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#footer a[target="_blank"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* GitHub footer icon styling */
+.fa-github {
+    color: white;
+    font-size: 2.6rem;
+    transition: transform 0.3s ease-in-out;
+}
+  
+/* GitHub footer icon animation on hover */
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
