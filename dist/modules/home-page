@@ -1,10 +1,10 @@
 export function drawHomePage() {
-    content = document.querySelector('#content');
-    middle = document.createElement('div');
+    let content = document.querySelector('#content');
+    let middle = document.createElement('div');
 
-    description1 = document.createElement('span');
+    let description1 = document.createElement('span');
     description1.textContent = "Tender, perfectly cooked steaks, seafood, and more!";
-    description2 = document.createElement('span');
+    let description2 = document.createElement('span');
     description2.textContent = "Made with ❤️ since 1951";
 
     middle.appendChild(description1);
