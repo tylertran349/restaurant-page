@@ -1,3 +1,3 @@
-import { drawHomePage, sayHi } from '../dist/modules/home-page'
+import { drawHomePage, sayHi } from '../dist/modules/home'
 
 drawHomePage();
