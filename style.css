@@ -113,7 +113,7 @@ body {
 
 #menu-section-title {
     font-family: 'Tangerine', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
     color: #8b0401;
 
 }
@@ -147,6 +147,8 @@ body {
 }
 
 #middle-contact iframe {
+    width: 40vw;
+    aspect-ratio: 3/2;
     border-radius: 1rem;
 }
 
