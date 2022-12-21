@@ -19,13 +19,13 @@ export function drawContactPage() {
 
     let homeButton = document.createElement('button');
     homeButton.textContent = "Home";
-    homeButton.setAttribute('id', 'btn-active');
+    homeButton.setAttribute('id', 'btn');
     let menuButton = document.createElement('button');
     menuButton.textContent = "Menu";
     menuButton.setAttribute('id', 'btn');
     let contactButton = document.createElement('button');
     contactButton.textContent = "Contact";
-    contactButton.setAttribute('id', 'btn');
+    contactButton.setAttribute('id', 'btn-active');
 
     function homeButtonFunction() { // Run function when home button is pressed
         console.log("Button 1 was pressed");
@@ -63,28 +63,30 @@ export function drawContactPage() {
     content.appendChild(header);
 
     // Create middle section
-    let middle = document.createElement('div');
-    middle.setAttribute('id', 'middle');
+    let middleContact = document.createElement('div');
+    middleContact.setAttribute('id', 'middle-contact');
 
-    let description1 = document.createElement('span');
-    description1.textContent = "Tender, perfectly cooked steaks, seafood, and more!";
+    let phoneNumber = document.createElement('span');
+    phoneNumber.textContent = "📞\u00A0\u00A0(123)-456-7890";
 
-    let description2 = document.createElement('span');
-    description2.textContent = "Made with ❤️ since 1951";
+    let email = document.createElement('span');
+    email.textContent = "✉️\u00A0\u00A0inquiries@tylerssteakhouse.com";
 
-    let image = document.createElement('img');
-    image.setAttribute('src', 'images/steak-picture.webp');
-    image.setAttribute('id', 'steak-picture')
+    let address = document.createElement('span');
+    address.textContent = "📍\u00A0\u00A06627 Hollywood Blvd, Hollywood, CA 90028";
 
-    let description3 = document.createElement('span');
-    description3.textContent = "Order online or visit us today!";
+    let map = document.createElement('iframe');
+    map.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.7426935381795!2d-118.3344444!3d34.1017315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf3cab531d6d%3A0x93c9d88bc0add84c!2s6627%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028!5e0!3m2!1sen!2sus!4v1671587574519!5m2!1sen!2sus');
+    map.setAttribute('style', 'border:0;');
+    map.setAttribute('allowfullscreen', '');
+    map.setAttribute('loading', 'lazy');
+    map.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
 
-    middle.appendChild(description1);
-    middle.appendChild(description2);
-    middle.appendChild(image);
-    middle.appendChild(description3);
-
-    content.appendChild(middle);
+    middleContact.appendChild(phoneNumber);
+    middleContact.appendChild(email);
+    middleContact.appendChild(address);
+    middleContact.appendChild(map);
+    content.appendChild(middleContact);
 
     // Create footer
     let footerDiv = document.createElement('div');
