@@ -3,7 +3,6 @@ import { drawHomePage } from './home'
 import { drawContactPage } from './contact'
 
 export function drawMenuPage() {
-    console.log("Drawing menu page...")
     let content = document.querySelector('#content');
 
     //Create header section
@@ -28,17 +27,14 @@ export function drawMenuPage() {
     contactButton.setAttribute('id', 'btn');
 
     function homeButtonFunction() { // Run function when home button is pressed
-        console.log("Button 1 was pressed");
         resetWebpage();
         drawHomePage();
     }
     function menuButtonFunction() { // Run function when menu button is pressed
-        console.log("Button 2 was pressed");
         resetWebpage();
         drawMenuPage();
     }
     function contactButtonFunction() { // Run function when contact button is pressed
-        console.log("Button 3 was pressed");
         resetWebpage();
         drawContactPage();
     }
