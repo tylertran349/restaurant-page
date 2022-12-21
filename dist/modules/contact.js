@@ -1,9 +1,9 @@
 import { resetWebpage } from './reset-webpage'
+import { drawHomePage } from './home'
 import { drawMenuPage } from './menu'
-import { drawContactPage } from './contact'
 
-export function drawHomePage() {
-    console.log("Drawing home page...")
+export function drawContactPage() {
+    console.log("Drawing contact page...")
     let content = document.querySelector('#content');
 
     //Create header section

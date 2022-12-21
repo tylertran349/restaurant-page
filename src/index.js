@@ -1,3 +1,5 @@
-import { drawHomePage, sayHi } from '../dist/modules/home'
+import { drawHomePage } from '../dist/modules/home'
+import { drawMenuPage } from '../dist/modules/menu'
+import { drawContactPage } from '../dist/modules/contact'
 
-drawHomePage();
+drawMenuPage(); // Load home page on page load
