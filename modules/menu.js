@@ -1,9 +1,9 @@
 import { resetWebpage } from './reset-webpage'
-import { drawMenuPage } from './menu'
+import { drawHomePage } from './home'
 import { drawContactPage } from './contact'
 
-export function drawHomePage() {
-    console.log("Drawing home page...")
+export function drawMenuPage() {
+    console.log("Drawing menu page...")
     let content = document.querySelector('#content');
 
     //Create header section
@@ -63,28 +63,50 @@ export function drawHomePage() {
     content.appendChild(header);
 
     // Create middle section
-    let middle = document.createElement('div');
-    middle.setAttribute('id', 'middle');
+    let middleMenu = document.createElement('div');
+    middleMenu.setAttribute('id', 'middle-menu');
 
-    let description1 = document.createElement('span');
-    description1.textContent = "Tender, perfectly cooked steaks, seafood, and more!";
+    let menuSectionOne = document.createElement('div');
+    menuSectionOne.setAttribute('id', 'menu-section');
 
-    let description2 = document.createElement('span');
-    description2.textContent = "Made with ❤️ since 1951";
+    let menuSectionOneTitle = document.createElement('span');
+    menuSectionOneTitle.textContent = "Appetizers";
+    menuSectionOneTitle.setAttribute('id', 'menu-section-title');
 
-    let image = document.createElement('img');
-    image.setAttribute('src', 'images/steak-picture.webp');
-    image.setAttribute('id', 'steak-picture')
+    let menuItemOne = document.createElement('div');
+    menuItemOne.setAttribute('id', 'menu-item');
 
-    let description3 = document.createElement('span');
-    description3.textContent = "Order online or visit us today!";
+    let menuItemOneName = document.createElement('span');
+    menuItemOneName.textContent = "Oysters Rockefeller 10";
+    menuItemOneName.setAttribute('id', 'menu-item-name');
+    let menuItemOneDescription = document.createElement('span');
+    menuItemOneDescription.textContent = "Four oysters on the half-shell, broiled and topped with butter, parsley, and breadcrumbs."
 
-    middle.appendChild(description1);
-    middle.appendChild(description2);
-    middle.appendChild(image);
-    middle.appendChild(description3);
+    let menuItemTwo = document.createElement('div');
+    menuItemTwo.setAttribute('id', 'menu-item');
 
-    content.appendChild(middle);
+    let menuItemTwoName = document.createElement('span');
+    menuItemTwoName.textContent = "French Onion Soup 6";
+    menuItemTwoName.setAttribute('id', 'menu-item-name');
+    let menuItemTwoDescription = document.createElement('span');
+    menuItemTwoDescription.textContent = "Slow-simmered soup with beef broth and onions. Topped with melted Gruyère cheese and croutons."
+
+    menuItemOne.appendChild(menuItemOneName);
+    menuItemOne.appendChild(menuItemOneDescription);
+    menuItemTwo.appendChild(menuItemTwoName);
+    menuItemTwo.appendChild(menuItemTwoDescription);
+    menuSectionOne.appendChild(menuSectionOneTitle);
+    menuSectionOne.appendChild(menuItemOne);
+    menuSectionOne.appendChild(menuItemTwo);
+    menuSectionOne.appendChild(menuItemOne);
+    middleMenu.appendChild(menuSectionOne);
+
+    let menuSectionTwo = document.createElement('div');
+
+
+    let menuSectionThree = document.createElement('div');
+
+    content.appendChild(middleMenu);
 
     // Create footer
     let footerDiv = document.createElement('div');
