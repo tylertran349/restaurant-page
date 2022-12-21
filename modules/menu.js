@@ -19,10 +19,10 @@ export function drawMenuPage() {
 
     let homeButton = document.createElement('button');
     homeButton.textContent = "Home";
-    homeButton.setAttribute('id', 'btn-active');
+    homeButton.setAttribute('id', 'btn');
     let menuButton = document.createElement('button');
     menuButton.textContent = "Menu";
-    menuButton.setAttribute('id', 'btn');
+    menuButton.setAttribute('id', 'btn-active');
     let contactButton = document.createElement('button');
     contactButton.textContent = "Contact";
     contactButton.setAttribute('id', 'btn');
@@ -102,9 +102,96 @@ export function drawMenuPage() {
     middleMenu.appendChild(menuSectionOne);
 
     let menuSectionTwo = document.createElement('div');
+    menuSectionTwo.setAttribute('id', 'menu-section');
 
+    let menuSectionTwoTitle = document.createElement('span');
+    menuSectionTwoTitle.textContent = "Entrees";
+    menuSectionTwoTitle.setAttribute('id', 'menu-section-title');
+
+    let menuItemThree = document.createElement('div');
+    menuItemThree.setAttribute('id', 'menu-item');
+
+    let menuItemThreeName = document.createElement('span');
+    menuItemThreeName.textContent = "New York Strip 35";
+    menuItemThreeName.setAttribute('id', 'menu-item-name');
+    let menuItemThreeDescription = document.createElement('span');
+    menuItemThreeDescription.textContent = "Served with mashed potatoes and sauteed mushrooms.";
+
+    let menuItemFour = document.createElement('div');
+    menuItemFour.setAttribute('id', 'menu-item');
+
+    let menuItemFourName = document.createElement('span');
+    menuItemFourName.textContent = "Ribeye 46";
+    menuItemFourName.setAttribute('id', 'menu-item-name');
+    let menuItemFourDescription = document.createElement('span');
+    menuItemFourDescription.textContent = "Served with mashed potatoes grilled vegetables, and herbed compound butter.";
+
+    let menuItemFive = document.createElement('div');
+    menuItemFive.setAttribute('id', 'menu-item');
+
+    let menuItemFiveName = document.createElement('span');
+    menuItemFiveName.textContent = "Surf 'n' Turf 43";
+    menuItemFiveName.setAttribute('id', 'menu-item-name');
+    let menuItemFiveDescription = document.createElement('span');
+    menuItemFiveDescription.textContent = "Grilled top sirloin and one lobster tail. Served with mashed potatoes.";
+
+    let menuItemSix = document.createElement('div');
+    menuItemSix.setAttribute('id', 'menu-item');
+
+    let menuItemSixName = document.createElement('span');
+    menuItemSixName.textContent = "Grilled Salmon 29";
+    menuItemSixName.setAttribute('id', 'menu-item-name');
+    let menuItemSixDescription = document.createElement('span');
+    menuItemSixDescription.textContent = "Served with garlic parmesean grilled broccoli and rice pilaf.";
+
+    menuItemThree.appendChild(menuItemThreeName);
+    menuItemThree.appendChild(menuItemThreeDescription);
+    menuItemFour.appendChild(menuItemFourName);
+    menuItemFour.appendChild(menuItemFourDescription);
+    menuItemFive.appendChild(menuItemFiveName);
+    menuItemFive.appendChild(menuItemFiveDescription);
+    menuItemSix.appendChild(menuItemSixName);
+    menuItemSix.appendChild(menuItemSixDescription);
+    menuSectionTwo.appendChild(menuSectionTwoTitle);
+    menuSectionTwo.appendChild(menuItemThree);
+    menuSectionTwo.appendChild(menuItemFour);
+    menuSectionTwo.appendChild(menuItemFive);
+    menuSectionTwo.appendChild(menuItemSix);
+    middleMenu.appendChild(menuSectionTwo);
 
     let menuSectionThree = document.createElement('div');
+    menuSectionThree.setAttribute('id', 'menu-section');
+
+    let menuSectionThreeTitle = document.createElement('span');
+    menuSectionThreeTitle.textContent = "Desserts";
+    menuSectionThreeTitle.setAttribute('id', 'menu-section-title');
+
+    let menuItemSeven = document.createElement('div');
+    menuItemSeven.setAttribute('id', 'menu-item');
+
+    let menuItemSevenName = document.createElement('span');
+    menuItemSevenName.textContent = "New York Cheesecake 12";
+    menuItemSevenName.setAttribute('id', 'menu-item-name');
+    let menuItemSevenDescription = document.createElement('span');
+    menuItemSevenDescription.textContent = "Served with strawberry sauce.";
+
+    let menuItemEight = document.createElement('div');
+    menuItemEight.setAttribute('id', 'menu-item');
+
+    let menuItemEightName = document.createElement('span');
+    menuItemEightName.textContent = "Key Lime Pie 10";
+    menuItemEightName.setAttribute('id', 'menu-item-name');
+    let menuItemEightDescription = document.createElement('span');
+    menuItemEightDescription.textContent = "Topped with whipped cream and key lime slices.";
+
+    menuItemSeven.appendChild(menuItemSevenName);
+    menuItemSeven.appendChild(menuItemSevenDescription);
+    menuItemEight.appendChild(menuItemEightName);
+    menuItemEight.appendChild(menuItemEightDescription);
+    menuSectionThree.appendChild(menuSectionThreeTitle);
+    menuSectionThree.appendChild(menuItemSeven);
+    menuSectionThree.appendChild(menuItemEight);
+    middleMenu.appendChild(menuSectionThree);
 
     content.appendChild(middleMenu);
 
